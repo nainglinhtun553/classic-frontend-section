@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<meta name="viewport" content="width-device-width,initial-scale=1.0">
+	<style type ="text/css">
+		/*universial selector*/
+		*{
+      		box-sizing: border-box;
+  		}
+		
+		/*Element selector*/
+		h1
+		{
+			background-color: #efefef;
+		     padding: 10px;    
+		     line-height: 60px;
+		     text-align: center;
+		}
+		
+		h3{
+		      background-color: yellow;
+		      padding: 10px;
+		      line-height: 30px;
+		      text-align:center;
+		      border: 1px solid red;
+		      border-radius: 10px;
+    	}
+
+    	 a{
+		      display: block;
+		      width: 200px;
+		      background-color: pink;
+		      padding: 10px;
+		      text-align: center;
+		      margin-top: 8px;
+		      text-decoration: none;
+		      border-radius: 10px;
+		      border-bottom: 1px solid black;
+    	}
+
+    	/*pseudo selector*/
+		a:hover       
+    	{
+		      background-color: green;
+		      color: white;
+    	}
+
+    	/*class selector*/
+    	.navbar 
+    		{
+		      float: left;
+		      width: 20%;
+		 	}
+		  .content 
+   		 	{
+		      float: left;
+		      width: 55%;
+		      background-color: green;
+		      text-align: center;
+		      border-radius: 15px ;
+		      margin-top: 7px;
+		      margin-left: 0px;
+		      margin-right: 20px;
+		      padding: 20px;
+		      overflow: hidden;    
+    		}
+
+    		.content img     
+   			 {
+			      border: 3px solid white;
+			      width: 400px;
+			      height: 250px; 
+			 }
+
+			 .sidebar 
+    			{
+			      float: left;
+			      width: 20%;
+			      background-color: lightblue;    
+			      padding: 10px;
+			      margin-top: 7px;
+			      text-align: center;
+    			}
+
+    		 .footer
+			    {
+			      background-color:#efefef;
+			      text-align:center;
+			      padding:15px;
+			      margin-top:7px;
+			      font-size:16px;
+			      font-family:Impact;
+			    }
+		 @media only screen and (max-width:800px) 
+ 		{
+		      /* For tablets: */
+		      .content 
+		      {
+		        width: 80%;
+		        padding: 0;
+		      }
+		      .sidebar 
+		      {
+		        width: 100%;
+		      }
+		}
+
+		@media only screen and (max-width:500px) 
+		{
+		      /* For mobile phones: */
+		      .navbar, .content, .sidebar 
+		      {
+		        width: 100%;
+		      }      
+ 		}
+
+
+
+	</style>
+	</head>
+<body>
+	
+	<div class="header">
+		<h1>Travelling Myanmar</h1>
+		<h3>Bagan</h3>
+	</div>
+
+	<div style="overflow:auto;">
+	<div class="navbar">
+     <a href="1.html">walk</a>
+     <a href="2.html">Transport</a>
+	<a href="3.html">History</a>
+	<a href="4.html">Gallery</a>
+	</div>
+
+	<div class="content">
+	     <h2>Bagan</h2>
+		<p>The Ancient City of Myanmar.</p>
+		<img src="bagan.jpg" alt="Bagan Image">
+	</div>
+
+	<div class="sidebar">
+     <h2>When?</h2>
+		<p>November</p>
+	<h2>Where?</h2>
+		<p>Arnanda Pagoda Fastival</p>
+	<h2>Price?</h2>
+		<i><s><b><p>Old price = $1000</p></b></s></i>
+		<p>New price = $800</p>
+
+	</div>
+
+	</div> 
+
+<div class="footer">
+	Copyright&copy;ClassicPKU PHP Team. All rights reserved.
+</div>
+</body>
+</html>

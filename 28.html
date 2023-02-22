@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">	 	
+		table,th,td		/*multiple selector*/
+		{
+			border:1px solid black;
+		}
+	 	th
+	 	{	 		
+	 		background-color: gray;
+	 		color:white;
+	 	}
+	 	td
+	 	{
+	 		text-align: center;
+	 	}
+	</style>	
+</head>
+<body>
+	<table>
+		<tr>
+			<th width="50px">Id</th>
+			<th width="100px">First Name</th>
+			<th width="100px">Last Name</th>
+			<th width="150px">Full Name</th>
+			<th width="100px">Salary</th>
+			<th width="100px">Bonus</th>
+			<th width="100px">Balance</th>
+		</tr>
+		<tr id="lastrecord">
+			<td id="id">			</td>   <!-- tabs 3 time  -->
+			<td id="fname">  		</td>
+			<td id="lname"> 		</td>
+			<td id="fullname">		</td>
+			<td id="salary">		</td>
+			<td id="bonus">			</td>
+			<td id="balance">		</td>
+		</tr>
+	</table>
+	
+	<br><br>
+
+	<h2>New Employee Data Entry </h2>
+	
+	<label for="in_id">Id:</label><br>
+	<input type="text" name="in_id" id="in_id"><br>
+
+	<label for="in_fname">First Name:</label><br>
+	<input type="text" name="in_fname" id="in_fname"><br>
+
+	<label for="in_lname">Last Name:</label><br>
+	<input type="text" name="in_lname" id="in_lname"><br>
+
+	<label for="in_salary">Salary:</label><br>
+	<input type="text" name="in_salary" id="in_salary"><br>
+
+	<label for="in_bonus">Bonus:</label><br>
+	<input type="text" name="in_bonus" id="in_bonus"><br><br>
+
+	<button onclick="entry()">Add Data</button>
+		
+	<script type="text/javascript">
+		function entry()
+			{
+				var rec_id     =parseInt(document.getElementById("in_id").value);
+				var rec_fname  =document.getElementById("in_fname").value;
+				var rec_lname  =document.getElementById("in_lname").value;
+				var rec_salary =parseInt(document.getElementById("in_salary").value);
+				var rec_bonus  =parseInt(document.getElementById("in_bonus").value);
+
+				var person={
+							   id:rec_id,
+							   firstname:rec_fname,
+							   lastname:rec_lname,
+							   fullname:function()
+							   			{
+							   				return this.firstname+" "+this.lastname;
+							   			},
+							   	salary:rec_salary,
+							   	bonus:rec_bonus,
+							   	balance:function()
+							   	 		{
+							   	 			return this.salary +  this.bonus;
+							   	 		}
+							};
+
+				document.getElementById("id").innerHTML 		=person.id;	
+				document.getElementById("fname").innerHTML 	 	=person.firstname;	
+				document.getElementById("lname").innerHTML 		=person.lastname;	
+				document.getElementById("fullname").innerHTML 	=person.fullname();	
+				document.getElementById("salary").innerHTML 	=person.salary;	
+				document.getElementById("bonus").innerHTML 		=person.bonus;	
+				document.getElementById("balance").innerHTML 	=person.balance();
+			}				
+	</script>
+</body>
+</html>

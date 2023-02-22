@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<!-- CSS Section -->
+	<style type="text/css">
+		p
+		{
+			color:black;
+			background-color:lightblue;
+			width:400px;
+			height:30px;
+			line-height: 30px;
+
+			border:1px solid red;
+			text-align:center;
+			border-radius:40px;
+		}
+	</style>
+</head>
+<body>
+<!-- Html Section -->
+UTC Time:							<p id="ans1"></p>
+Current Year:						<p id="ans2"></p>
+Current Month(Number): 				<p id="ans3"></p>
+Current Month:(Text): 				<p id="ans4"></p>
+Current Date:						<p id="ans5"></p>
+Current Hour:						<p id="ans6"></p>
+Current Minute:						<p id="ans7"></p>
+Current Second:						<p id="ans8"></p>
+Current Day(Number): 				<p id="ans9"></p>
+Current Day(Text): 					<p id="ans10"></p>
+
+<!-- Javascript Section -->
+<script type="text/javascript">
+	var d = new Date();		//object
+	document.getElementById("ans1").innerHTML = d
+	document.getElementById("ans2").innerHTML = d.getFullYear();
+	document.getElementById("ans3").innerHTML = d.getMonth()+1;
+
+	var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];    //array creation
+	document.getElementById("ans4").innerHTML=months[d.getMonth()];
+
+	document.getElementById("ans5").innerHTML=d.getDate();
+
+	document.getElementById("ans6").innerHTML=d.getHours();
+	document.getElementById("ans7").innerHTML=d.getMinutes();
+	document.getElementById("ans8").innerHTML=d.getSeconds();
+
+	document.getElementById("ans9").innerHTML=d.getDay();
+	var day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]; // array creation
+	document.getElementById("ans10").innerHTML=days[d.getDay()];
+</script>
+</body>
+</html>

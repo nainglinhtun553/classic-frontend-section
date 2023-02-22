@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		h1
+		{
+			font-family: arial;
+			font-weight: bold;
+			font-style: italic;
+
+
+		}
+		body
+		{
+			margin: auto;
+			max-width: 800px;
+			background: #FFFFF0;
+		}
+		.box
+		{
+			font-family: arial;
+			border:1px solid #a22;
+			padding:1px;
+			margin-bottom:8px;
+			background-color:#FFDEAD;
+		}
+		.box h3
+		{
+			color:#000;
+			background: #5eecc;
+			padding:8px;
+			margin:8px;
+			cursor:pointer;
+			background-color:#FFFAFA;
+		}
+		.box img
+		{
+			padding:8px;
+			margin:0px;
+		}
+		.box h3.up
+		{
+			color:black;
+		}
+		li:nth-child(odd)
+		{
+			font-weight: bold;
+		}
+		li:nth-child(even)
+		{
+			font-weight:normal;
+			list-style-type:none;
+			color:blue;
+			margin-bottom: 7px;
+		}
+		.box img .box ul
+		{
+			display: none;
+		}
+		.box1
+		{
+			font-weight:normal;
+			list-style-type: none;
+			font-family: arial;
+			border:1px solid #a22;
+			padding:1px;
+			margin-bottom:8px;
+			background-color:#FFDEAD;
+		}
+	</style>
+</head>
+<body>
+<center><h1>Resume of Naing Lin Htun</h1></center>
+	
+	<div class="box">
+		<h3>Profile</h3>
+		<img src="myphoto.jpg" alt="Niang Lin Htun Photo" width="20%">
+	<ul>
+		<li>Name</li>
+		<li>Naing Lin Htun</li>
+		<li>Mobile Phone Number</li>
+		<li>09-797960728,09-771310581</li>
+		<li>E-mail</li>
+		<li>myanmaict.net@gmail.com</li>
+	</ul>	
+
+	</div>
+	<div class="box">
+		<h3>Personal Information</h3>
+		<ul>
+			<li>Name:</li>
+			<li>Naing Lin Htun</li>
+			<li>NRC No.:</li>
+			<li>5/SaKaNa(Naing)244390</li>
+			<li>Date of Bith:</li>
+			<li>6 Sep,1995</li>
+			<li>Gender:</li>
+			<li>Male</li>
+			<li>Marital Status:</li>
+			<li>Single</li>
+			<li>Race:</li>
+			<li>Burma</li>
+			<li>Religion:</li>
+			<li>Buddhism</li>
+			<li>Nationality:</li>
+			<li>Myanmar</li>
+		</ul>
+	</div>
+	<div class="box1">
+		<h3>Academic Background</h3>
+		<ul>
+			<li>2012 - 2019 [Sagaing University(Sagaing),University of Mandalay(Mandalay)]</li>
+			<li>B.A(Geography)(Q),M.A(Geography)(Thesis), PGDGIS(Post Graduated Diplima in Geographic Information and Remote Sensing)</li>
+			<li>1-1-2020 to today[GIS Technican at MCDC(Research and Remote Sensing Department)]</li>
+			</ul>		
+	</div>
+	<div class="box1">
+		<h3>IT Skills</h3>
+		<ul>
+			<li>Computer Basic Course at Ever Smile Computer Center</li>
+			<li>Office Staff Course at L2 Computer Center</li>
+			<li>Parctical A<sup>+</sup> Course at KMD Computer Center</li>
+			<li>Basic Software Engineering (BSE) Course at KMD Computer Center </li>
+
+		</ul>
+	</div>
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+		$("h3").click( function()
+				{
+					var parent=$(this).parent();
+					$("ul",parent).slideToggle("slow");
+					$(this).toggleClass("up");
+					$("img",parent).slideToggle("slow");
+				}
+			);
+	</script>
+	
+</body>
+</html>

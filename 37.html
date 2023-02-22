@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+		function insert()
+		{
+			var inputname = document.getElementById("name").value;
+			$("ul").append("<li>" + inputname + "</li>");
+		}
+	</script>
+</head>
+<body>
+	<h2>List of Student:</h2>
+	<ul type="square">
+		
+	</ul>
+	
+	<h2>New Student Name:</h2>
+	<input type="text" name="name" id="name"><br><br>
+	<button onclick="insert()">Add Student</button><br>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+</head>
+<body>
+
+<p id="num_ans"></p>
+
+<button onclick="num_asc_sort()">Number Sort Asc</button>
+<button onclick="num_dec_sort()">Number Sort Dec</button>
+
+
+<p id="text_ans"></p>
+
+<button onclick="text_asc_sort()">Text Sort Asc</button>
+<button onclick="text_dec_sort()">Text Sort Dec</button>
+
+<script type="text/javascript">
+
+	var numarr=[40,100,25,10];    
+    document.getElementById("num_ans").innerHTML=numarr;
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];        
+    document.getElementById("text_ans").innerHTML=fruits;
+
+
+     function num_asc_sort()
+     {
+     	numarr.sort(
+                     function (a,b)
+                      { return a-b; }
+     		        );
+     	 document.getElementById("num_ans").innerHTML=numarr;
+     }
+     function num_dec_sort()
+     {
+        numarr.sort(
+                    function (a,b)
+                    { return b-a; }
+     		        );
+     	 document.getElementById("num_ans").innerHTML=numarr;           
+     }
+     function text_asc_sort()
+     {
+         fruits.sort();
+         document.getElementById("text_ans").innerHTML=fruits;
+     }
+     function text_dec_sort()
+     {
+        fruits.reverse();
+        document.getElementById("text_ans").innerHTML=fruits;          
+     }
+</script>
+</body>
+</html>

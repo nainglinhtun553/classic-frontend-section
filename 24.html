@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title> 
+	<style type="text/css">
+		body
+		 {
+			background-color: #efefef;			
+		 }
+		.nav, .sub /*multiple selector*/
+		 {
+			font-family: Arial;
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		 }
+		.nav li 		/*child selector*/
+		 {
+			width: 250px;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 10px;
+			text-align: center;
+			background-color:green;			
+		 }
+		.sub li
+		 {
+			background-color:red;	
+		 }
+		.nav li a  /*child selector*/
+		 {
+			text-decoration: none;
+			color: :red;
+			display: block;
+			border-right: 1px solid white;
+		 }
+		.nav > li /* adjecent selector */
+		 {
+		 	float: left;
+		 	border-bottom: 3px solid black;
+		 }
+		.sub   
+		 {
+		 	display: none;
+		 	position: absolute;
+		 }
+ 		.nav li a:hover  /*pseudo selector */
+		 {
+		 	background-color: yellow;
+		 }		
+		 .sub li a:hover  /*pseudo selector */
+		 {
+		 	background-color: yellow;
+		 	margin-top: 3px;		 	
+		 }
+		 .nav > li:hover .sub  /* pseudo compare selector */
+		 {
+		 	display: block;
+		 }		
+	</style>
+</head>
+<body>	
+	<ul class="nav">
+		<li><a href="">Home	 							</a></li>
+		<li><a href="">Administrative &raquo;			</a>
+			<ul class="sub">
+				<li><a href="">Staff Affair 			</a></li>
+				<li><a href="">Student Affair 			</a></li>
+				<li><a href="">QMS Office 				</a></li>
+			</ul>
+		</li>
+		<li><a href="">Organization &raquo;				</a>
+			<ul class="sub">
+				<li><a href="">Teacher Union 			</a></li>
+				<li><a href="">Student Union 			</a></li>
+				<li><a href="">Book Club 				</a></li>
+			</ul>
+		</li>
+		<li><a href="">Department &raquo; 				</a>
+			<ul class="sub">
+				<li><a href="">Software 				</a></li>
+				<li><a href="">Hardware 				</a></li>
+				<li><a href="">Research 				</a></li>
+			</ul>
+		</li>
+		<li><a href="">About Us &raquo;						</a>
+			<ul class="sub">
+				<li><a href="">Vision 					</a></li>
+				<li><a href="">Mission 					</a></li>
+				<li><a href="">Aims and Duties 			</a></li>
+				<li><a href="">Contact Us 				</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

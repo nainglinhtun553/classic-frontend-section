@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		p{
+			width: 500px;
+			height: 50px;
+			line-height: 50px;
+			background-color: #D2B48C;
+			text-align: center;	
+		}
+		.obj
+		{
+			border:1px solid green;
+			width: 500px;
+			padding: 15px;
+			text-align: center;			
+		}		
+	</style>
+</head>
+<body>
+
+<h2>Showing My Personal Information using Javascript Programming! </h2>
+
+<h3>Body Weight( Number Decimal )</h3>			
+<p id="num"></p>
+
+<h3>Name ( String )</h3>
+<p id="str"></p>
+
+<h3>Cash Balance ( Number )</h3>			
+<p id="bal"></p>
+
+<h3>Work in Mandalay University</h3>
+<p id="arr"></p>
+
+<h3>My Carrier work in Mandalay University</h3>	
+<p id="arrele"></p>
+
+<h3>Employee ( Information )</h3>
+<div class="obj">
+	<p id="fname" ></p>
+	<p id="lname" ></p>
+	<p id="fullname" ></p>
+	<p id="age" ></p>
+	<p id="rank" ></p>
+	<p id="salary" ></p>	
+	<p id="bonus" ></p>	
+	<p id="cash" ></p>	
+</div>
+
+<script type="text/javascript">
+
+	var weight = 30.0; 
+	document.getElementById("num").innerHTML = weight + " Kg";
+
+	var firstname ="Naing Lin" ;                         
+	var lastname = "Htun"; 
+	document.getElementById("str").innerHTML = firstname + " " + lastname;
+
+	var salary = 200000;
+	var bonus = 5000;
+	document.getElementById("bal").innerHTML = salary + bonus;
+                    		
+	var cars = new Array("Engineer", "GIS Technican", "Tutor","Student");	//Array
+	document.getElementById("arr").innerHTML = cars;
+	document.getElementById("arrele").innerHTML = cars[3];
+
+	var x = {
+				firstname: 	"Naing Lin", 
+				lastname: 	"Htun",
+				age: 		25,
+				rank: 		"GIS Technican in M.U",
+				salary: 	200000,
+				bonus:      5000
+			};   								 // Object
+
+	document.getElementById("fname").innerHTML = x.firstname;	// Access Specifier(.)
+	document.getElementById("lname").innerHTML = x.lastname;
+	document.getElementById("fullname").innerHTML = x.firstname + " " + x.lastname;
+	document.getElementById("age").innerHTML = x.age;
+	document.getElementById("rank").innerHTML = x.rank;
+	document.getElementById("salary").innerHTML = x.salary;
+	document.getElementById("bonus").innerHTML = x.bonus;
+	document.getElementById("cash").innerHTML = x.salary + x.bonus;
+</script>
+</body>
+</html> 

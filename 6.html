@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<style type="text/css">
+	td   /* Element Sector */
+	{
+		text-align: center;
+		background-color: green;
+		color:white;
+	}
+
+	th /* Element Sector */
+	{
+		background-color:yellow;
+		color:black;
+	}
+	.buttom td /* class Child Selector */
+	{
+		background-color: yellow;
+		color:black;
+	}
+	</style>
+
+	</head>
+<body>
+<table border ="1">
+<tr>
+	<th width ="50px">No</th>	
+	<th width ="100px">Name</th>
+	<th width ="50px">Age</th>
+	<th width ="100px">Salary</th>
+	<th width ="200px">Remark</th>
+</tr>
+
+<tr>
+	<td>1</td>
+	<td>Mg Mg</td>
+	<td>20</td>
+	<td style="text-align: right">500,000</td>
+	<td rowspan ="4">Bonous is not Defined</td>
+</tr>
+
+<tr>
+	<td>2</td>
+	<td>Ma Ma</td>
+	<td>20</td>
+	<td style="text-align: right;">200,000</td>
+</tr>
+<tr class="buttom">
+	<td colspan="3">Total</td>
+	<td style="text-align: right;">1,000,000</td>
+</tr>
+</table>
+</body>
+</html>

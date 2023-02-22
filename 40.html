@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		body
+		{
+			margin: auto;
+			max-width: 800px; 
+		}
+		.box 
+		{
+			font-family: arial;		
+			border: 1px solid #a22;
+			padding: 1px;
+			margin-bottom: 8px;
+		}
+		.box h3 
+		{
+			color: #000;
+			background: #e5eecc;
+			padding: 8px;
+			margin: 0;
+			cursor: pointer;
+		}
+		.box img
+		{
+			padding: 8px;
+			margin: 0px;
+		}
+		.box h3.up 
+		{
+			color: red;
+		}		
+		li:nth-child(odd) 
+		{
+  			font-weight: bold;	
+		}
+		li:nth-child(even) 
+		{
+  			font-weight: normal;
+  			list-style-type: none;	
+  			color: blue;
+  			margin-bottom: 7px;
+		}
+		.box img, .box ul
+		{
+			display: none;
+		}
+
+	</style>
+
+	
+
+</head>
+<body>
+
+	<h1>Resume of Myo Tun Naung</h1>
+
+	<div class="box">
+		<h3>Profile</h3>
+		<img src="myphoto.jpg" width="20%">
+		<ul>
+			<li>Name</li>
+			<li>Myo Tun Naung</li>
+			<li>Mobile Phone Number</li>
+			<li>0943071844</li>
+			<li>E-mail</li>
+			<li>myotunnoung@gmail.com</li>
+		</ul>
+	</div>
+
+	<div class="box">
+		<h3>Personal Information</h3>
+		<ul>
+			<li>Name</li>
+			<li>Myo Tun Naung</li>
+			<li>NRC No.</li>
+			<li>5/SaKaNa(Naing) 177085</li>
+			<li>Date of Birth</li>
+			<li>8 May, 1981</li>
+			<li>Gender</li>
+			<li>Male</li>
+			<li>Marital Status</li>
+			<li>Married</li>
+			<li>Race</li>
+			<li>Burma</li>
+			<li>Religion</li>
+			<li>Buddhism</li>
+			<li>Nationality</li>
+			<li>Myanmar</li>			
+		</ul>
+	</div>
+
+	<div class="box">
+		<h3>Academic Background</h3>
+		<ul>
+			<li>1999 – 2002 [ University of Computer Studies, Mandalay ]</li>
+			<li>Bachelor of Computer Technology ( B.C.Tech )</li>
+			<li>12 May 2014 - 16 June 2014 [ ICTTI, Japan ]</li>
+			<li>Web Design and PHP Web Development</li>
+		</ul>
+	</div>
+
+	<div class="box">
+		<h3>IT Skills</h3>
+		<ul>
+			<li>Office Application</li>
+			<li>Microsoft Office ( Word, Excel, PowerPoint )<br>
+				Adobe PageMaker <br>
+				Adobe Photoshop <br>
+				Using Internet, E-mail, Facebook <br>
+			</li>
+			<li>Computer System</li>
+			<li>PC, Laptop Maintenance Installation Windows,Drivers,Softwares</li>			
+			<li>Programming Language</li>
+			<li> Turbo C,C++ <br>
+				 Java Programming ( J2SE ) <br>
+				 Microsoft C#.Net <br>
+				 Python <br>
+			</li>
+			<li>Web Design</li>
+			<li>HTML <br>
+				CSS <br>
+				JavaScript <br>
+				jQuery <br>
+				Bootstrap <br>
+				WordPress <br>
+			</li>
+			<li>Web Development and Framework</li>
+			<li>PHP,Pure MVC Patterm, Laravel Framework </li>
+		</ul>
+	</div>
+
+	<div class="box">
+		<h3>Working Experience</h3>
+		<ul>
+			<li>2015-2020 [ Classic Computer Center, Pakokku, Myanmar]</li>
+			<li>Founder and Teacher</li>
+			<li>2013-2015 [ L & H Paint Industry, Singapore]</li>
+			<li>Operation Supervisor</li>
+			<li>2005-2013 [ Classic Computer Center, Pakokku, Myanmar]</li>
+			<li>Founder and Teacher</li>
+			<li>2004-2005 [ Elenia, Mandalay, Myanmar ]</li>
+			<li>Computer Technician, Network Engineer</li>			
+		</ul>
+	</div>
+
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+
+		$("h3").click(  function() 
+						{
+							var parent = $(this).parent();
+							$("ul", parent).slideToggle("slow");
+							$(this).toggleClass("up");
+
+							$("img", parent).slideToggle("slow");
+							
+						}
+					);
+	</script>
+</body>
+</html>

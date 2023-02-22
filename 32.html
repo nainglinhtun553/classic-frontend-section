@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		td
+		{
+			width: 50px;
+			text-align: center;
+		}		
+	</style>
+</head>
+<body>
+
+	<label for="in_num">Enter Number:</label><br>
+	<input type="text" id="in_num"></input><br><br>
+
+	<button onclick="show()">Show Table</button><br><br>
+
+	<table id="t">		
+	</table>	
+
+	<script type="text/javascript">		
+		function show()
+		{
+			var num=parseInt(document.getElementById("in_num").value);
+
+			var tbl = document.getElementById("t");		
+			tbl.border = "1";
+			
+			var totalrows = tbl.rows.length;		
+			
+			if( totalrows > 0)
+			{
+				for(var i=1; i<=totalrows; i++)
+				{
+					tbl.deleteRow(0);
+				}
+			}
+
+			for(var i=1;i<=12; i++)
+			{
+
+				var row = tbl.insertRow();
+
+		  		var td1 = row.insertCell(0);
+		  		var td2 = row.insertCell(1);
+		  		var td3 = row.insertCell(2);
+		  		var td4 = row.insertCell(3);
+		  		var td5 = row.insertCell(4);
+		  		
+		  		td1.innerHTML = num;
+		  		td2.innerHTML = "x";
+		  		td3.innerHTML =  i;
+		  		td4.innerHTML = "=";
+		  		td5.innerHTML = num*i;  		
+	  		}
+
+			document.body.appendChild(tbl);
+		}
+	</script>
+</body>
+</html>

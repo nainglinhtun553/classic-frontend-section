@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+	$(document).ready(
+		               function()
+		               {               
+
+	  						$("#btn1").click(
+	  											function()
+	  											{
+	    											$("#name").val("Classic Student Group");
+	  											}
+	  										);
+	  						$("#btn2").click( 
+		                      	                function()
+		                      	                {
+		                                          	$("#p1").text("Hello Sayar Myo");
+		                                        }
+	                                       );
+
+	  						$("#btn3").click( 
+		  										function()
+		  										{
+		    										$("#p2").html("<b><i><u> Classic Computer Center</u></i></b>");
+		  										}
+	  										);
+						}
+					);
+	</script>
+</head>
+<body>
+
+<label for="name">Your Name</label>
+<input type="text" id="name" value="Myo Tun Naung">
+
+<p id="p1">B.C.Tech (Hons:)</p>
+<p id="p2">UCSM Third Batch</p>
+
+<hr>
+
+<button id="btn1">Change Value</button>
+<button id="btn2">Change Text</button>
+<button id="btn3">Change HTML</button>
+
+</body>
+</html>

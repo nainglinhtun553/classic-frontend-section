@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<style type="text/css">
+	p
+	{
+		width:200px;
+		height:30px;
+		line-height: 30px;
+		font-size: 18px;
+		background-color: darkgreen;
+		color:white;
+		text-align: center;
+		border: 1px solid black;
+		border-radius: 5px;
+		display: inline;
+	}
+		
+
+
+	</style>
+	
+</head>
+<body>
+	<h2>Exam Result for one Subject:</h2>
+
+	<label for="mya"> Myanmar's Mark: </label><br>
+	<input type="text" id="mya">
+
+	<p id="ans"></p><br>
+	<button onclick="check()">Result</button>
+	<hr>
+	<h2>Subjects 4 Results (Fail, Pass, Merit, Distinction)</h2>
+
+	<label for="inmya">Myanmar:</label><br>
+	<input type="text" id="inmya"><br>
+
+	<label for="ineng">English:</label><br>
+	<input type="text" id="ineng"><br>
+
+	<label for="inmath">Math:</label><br>
+	<input type="text" id="inmath">
+
+	<p id="resultans"></p><br>
+	<button onclick="checkResultAll()">Check Result</button>
+	<hr>
+
+	<h2>Check the Number is Prime or Not Prime</h2>
+
+	<label for="num">Number:</label>
+	<input type="text" id="num">
+
+	<p id="primeans"></p><br>
+	<button onclick="checkPrime()">CheckPrimeNumber</button>
+	<hr>
+
+	<script>
+		function check()
+		{
+			var mya = parseInt(document.getElementById("mya").value);
+			 if(mya>=40)
+			 {
+			 	document.getElementById("ans").innerHTML = "pass";
+			 }
+			 else
+			 {
+			 	document.getElementById("ans").innerHTML = "Fail";
+			 }
+		}
+			function checkResultAll()
+			{
+				var Mya  = parseInt(document.getElementById("inmya").value);
+				var eng  = parseInt(document.getElementById("ineng").value);
+				var math  = parseInt(document.getElementById("inmath").value);
+				if(mya < 40 || eng< 40 || math<80)
+				{
+					document.getElementById("resultans").innerHTML = "Fail"
+				}
+				else if (mya>=75 || eng>=75 ||math>=80)
+				{
+					document.getElementById("resultans").innerHTML = "Pass with Distinction";
+				}
+				else if (mya>=65 && eng>=65 && math>=65)
+				{
+					document.getElementById("resultans").innerHTML = "Pass with Merit";
+
+				}
+				else
+				{
+					document.getElementById("resultans").innerHTML = "pass";
+				}
+
+			}
+			function checkPrime()
+			{
+				var num = parseInt(document.getElementById("num").value);
+				var divisor = 1;
+				do{
+					divisor++;
+
+				}while(num % divisor !=0);
+				if (num==divisor)
+				{
+					document.getElementById("primeans").innerHTML="Prime Number";
+				}
+				else
+				{
+					document.getElementById("primeans").innerHTML="Not Prime Number";
+				}
+			}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+		body
+		{
+			height:200px;
+		}	
+		.box1,.box2,.box3,.box4,.box5,.box6
+		{
+			width: 200px;
+			height:150px;
+		}
+
+		
+		.box1
+		{
+			background: yellow;
+			position: fixed;
+			left:500px;
+			top:100px;
+
+			z-index: 2;
+			opacity: 0.5;
+		}
+		.box2
+		{
+			background: green;
+
+			position:fixed;
+			left:550px;
+			top:150;
+
+			z-index: 1;
+			opacity: 0.5;
+		}
+		.box3
+		{
+			background: red;
+			position:fixed;
+			left:520px;
+			top:200px;
+			z-index: 0;
+		}
+		.box4
+		{
+			background-color: yellow;
+			color:red;
+		}
+		.box5
+		{
+			background-color: green;
+			color:white;
+		}
+		.box6
+		{
+			background-color: red;
+			color:black;
+
+		}
+		.box4,.box5,.box6
+		{
+			text-align: center;
+			line-height: 150px;
+		}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+</head>
+<body>
+	<script type="text/javascript">
+		for (var i=1; i<=10; i++)
+		{
+			document.write( i + "   ");
+		}	
+		document.write("<hr>");
+		for (var j=1; j<=10; j+=2)
+		{
+			document.write( j + "   ");
+		}
+		document.write("<hr>");
+		for (var k=2; k<=10; k+=2)
+		{
+			document.write( k + "   ");
+		}
+		document.write("<hr>");
+		for (var l=10; l>=1; l--)
+		{
+			document.write( l + "   ");
+		}
+	</script>
+
+	<hr>
+
+	<label for="stnum">Start Number:</label><br>
+	<input type="text" name="stnum" id="stnum" value="1"><br>
+
+	<label for="endnum">End Number:</label><br>
+	<input type="text" name="endnum" id="endnum" value="10"><br>
+
+	<label for="result">Result:</label><br>
+	<input type="text" name="result" id="result"><br><br>
+
+
+	Answer: <p id="ans"> </p>
+
+	<button onclick="sum()"> 		Sum 	</button>
+	<button onclick="oddsum()"> 	OddSum 	</button>
+	<button onclick="evensum()"> 	EvenSum </button>
+
+	<hr>
+
+	 <script type="text/javascript">
+
+	 	function sum()
+		{
+			var stnum  = parseInt(document.getElementById("stnum").value);
+			var endnum = parseInt(document.getElementById("endnum").value);
+
+			var answer=0;
+			
+			for(var i = stnum; i <= endnum; i++)
+			{
+				answer = answer + i;
+				//answer += i;
+			}
+			
+			document.getElementById("result").value  = answer;
+			document.getElementById("ans").innerHTML = answer;
+		}
+		function oddsum()
+		{
+			var stnum  =parseInt(document.getElementById("stnum").value);
+			var endnum =parseInt(document.getElementById("endnum").value);
+
+			var answer=0;
+			
+			if(parseInt(stnum%2) == 0)
+			{
+				stnum = stnum +1;
+			}
+
+			for(var i = stnum; i <= endnum; i+=2)
+			{
+				answer = answer + i;
+			}
+			
+			document.getElementById("result").value  = answer;
+			document.getElementById("ans").innerHTML = answer;
+		}
+
+		function evensum()
+		{
+			var stnum  =parseInt(document.getElementById("stnum").value);
+			var endnum =parseInt(document.getElementById("endnum").value);
+
+			var answer=0;
+
+			if( parseInt(stnum%2) != 0)
+			{
+				stnum = stnum +1;
+			}
+			
+			for(var i = stnum; i <= endnum; i+=2)
+			{
+				answer = answer + i;
+			}
+			
+			document.getElementById("result").value  = answer;
+			document.getElementById("ans").innerHTML = answer;
+		}
+	</script>
+</body>
+</html>

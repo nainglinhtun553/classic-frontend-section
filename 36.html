@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+  <style type="text/css">
+    #d1 img
+    {
+    	width: 50px;
+    	height: 50px;    	
+    	position: absolute;
+    }
+  </style>
+  <script src="jquery-3.5.0.min.js"></script> 
+  <script type="text/javascript">
+
+    function animatetest()
+    {
+        $("#d1 img").animate( 
+                              {
+                                 left     : '250px',
+                                 top      : '200px',
+                                 width    : '150px',
+                                 height   : '150px',                       
+                                 opacity  : '0.2'
+                              }
+
+                            );
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <button onclick="animatetest()">Animation with Function</button>
+  <br><br>
+
+  <div id="d1"> 
+    <img src="lesson7/apple.png"> 
+  </div>
+
+</body>
+</html>

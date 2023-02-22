@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<title>Classic Student Group</title>	
+	<style type="text/css">
+		body
+		{
+			margin: auto;
+			max-width: 500px; 
+		}
+		h1
+		{
+			text-align: center;
+		}
+		#header1, #header2, #header3
+		{
+			color: #000;
+			background: #e5eecc;
+			padding: 8px;
+			margin: 0;
+			border: 1px solid #a22;
+			cursor: pointer;
+		}
+		#panel1
+		{
+			font-family: arial;		
+			border: 1px solid #a22;
+			padding: 1px;
+			margin-bottom: 8px;
+		}	
+		#panel2, #panel3
+		{
+			font-family: arial;		
+			border: 1px solid #a22;
+			padding: 1px;
+			margin-bottom: 8px;
+			display: none;
+		}			
+		#panel1 img
+		{
+			padding: 8px;
+			margin: 0px;
+		}			
+		li:nth-child(odd) 
+		{
+  			font-weight: bold;	
+		}
+		li:nth-child(even) 
+		{
+  			font-weight: normal;
+  			list-style-type: none;	
+  			color: blue;
+  			margin-bottom: 7px;
+		}
+	</style>
+
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+
+		$(document).ready(
+							function()
+							{
+  								$("#header1").click
+  								(	function()
+  									{
+    									$("#panel1").slideUp("slow");
+  									}
+  								);
+							}
+						);
+		$(document).ready(
+							function()
+							{
+  								$("#header2").click
+  								(	function()
+  									{
+    									$("#panel2").slideDown("slow");
+  									}
+  								);
+							}
+						);
+		$(document).ready(
+							function()
+							{
+  								$("#header3").click
+  								(	function()
+  									{
+    									$("#panel3").slideToggle("slow");
+  									}
+  								);
+							}
+						);
+	</script>
+</head>
+<body>
+
+	<h1>Naing Lin Htun</h1>
+
+	<div id="header1">Profile</div>
+	<div id="panel1">
+		<img src="myphoto.jpg" width="20%">	
+		<ul>
+			<li>Name</li>
+			<li>Naing Lin Htun</li>
+			<li>Mobile Phone Number</li>
+			<li>09797960728</li>
+			<li>E-mail</li>
+			<li>myanmaict.net@gmail.com</li>
+		</ul>
+	</div>	
+
+	<div id="header2">Personal Information</div>
+	<div id="panel2">		
+		<ul>
+			<li>Name</li>
+			<li>Naing Lin Htun</li>
+			<li>NRC No</li>
+			<li>5/SaKaNa(Naing) 244390</li>
+			<li>Date of Birth</li>
+			<li>9.6.1995</li>
+		</ul>
+	</div>	
+
+	<div id="header3">Academic Background</div>
+	<div id="panel3">		
+		<ul>
+			<li>B.A(Geography)(Q),M.A(Geography)(Thesis), PGDGIS(Post Graduated Diplima in Geographic Information and Remote Sensing)</li>
+			<li>2012 - 2019 [Sagaing University(Sagaing),University of Mandalay(Mandalay)]</li>
+			<li>Web Design and Development</li>
+			<li>Classic Computer Center, Pakakku Township, Myanmar</li>			
+		</ul>
+	</div>
+
+</body>
+</html>

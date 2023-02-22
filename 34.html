@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		*
+		{
+			margin-left: 20px;
+			margin-right: 20px;
+			background-color: #FFFACD;
+			font-size: 18px;
+		}
+		a{
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			background-color: lightblue;
+			color: red;
+			text-decoration: none;
+			text-align: center;
+			border-radius: 5px;
+		}
+		a:hover
+		{
+			background-color: white;
+			color:red;
+		}
+		p
+		{
+			text-align: justify;
+		}
+		.button
+		{
+			
+			font-size: 8px;
+			background: blue;
+		}		
+	</style>
+
+	<script src="jquery-3.5.0.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(	function ()					//Nameless Function
+							{ 
+								$("#btn1").click
+								(
+					                function ()			//Nameless Function
+					                {
+					                   $("h2").hide();
+					                }
+						   	    );
+					        }
+						);
+
+		$(document).ready(	function ()					//Nameless Function
+							{ 
+								$("#btn2").click
+								(
+					                function ()			//Nameless Function
+					                {
+					                   $("p").hide();
+					                }
+						   	    );
+					        }
+						);
+
+		$(document).ready(	function ()					//Nameless Function
+							{ 
+								$("#btn3").click
+								(
+					                function ()			//Nameless Function
+					                {
+					                   $("h2").show();
+					                   $("p").show();
+					                }
+						   	    );
+					        }
+						);
+
+		$(document).ready(  function ()					//Nameless Function
+						   	{ 
+						   	 	$("#btn4").click
+						   	    (                
+					                function ()			//Nameless Function
+					                {
+					                   $("p").toggle();                   
+					                }
+						   	    );
+					        }
+
+						);
+
+		$(document).ready(  function ()					//Nameless Function
+						   	{ 
+						   	 	$("#btn5").click
+						   	    (                
+					                function ()			//Nameless Function
+					                {
+					                   $("img").toggle();                   
+					                }
+						   	    );
+					        }
+						);
+
+		function showhide()
+		{			 
+	        $("h2").toggle();	          
+		}
+
+		$(document).ready(  function ()				//Nameless Function
+						   	{ 
+						   	 	$("#link1").click
+						   	    (                
+					                function ()		//Nameless Function
+					                {
+					                   $("#secondp").toggle();                   
+					                }
+						   	    );
+					        }
+						);
+
+	</script>
+</head>
+<body>
+
+<h2>Naing Lin Htun</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	</p>
+
+<img src="bagan.jpg" width="200px" height="150px">
+
+<p id="secondp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<hr>
+<div class="button">
+<button id="btn1"> 	Hide Name 				</button>
+<button id="btn2"> 	Hide Paragraph 			</button>
+<button id="btn3"> 	Show Name and Paragraph	</button>
+
+<button id="btn4"> 				Toggle Paragraph 	</button>
+<button id="btn5"> 				Toggle Image 		</button>
+<button onclick="showhide()"> 	Toggle Name 		</button>
+</div>
+<hr>
+<br>
+<a href="#" id="link1" >Toggle Second Paragraph </a>
+
+</body>
+</html>

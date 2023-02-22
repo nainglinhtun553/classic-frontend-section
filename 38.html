@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">	 	
+		table,th,td		/*multiple selector*/
+		{
+			border:1px solid black;
+		}
+	 	th
+	 	{
+	 		
+	 		background-color: gray;
+	 		color:white;
+	 	}
+	 	td
+	 	{
+	 		text-align: center;
+	 	}	 
+	</style>
+
+	<script src="jquery-3.5.0.min.js"> </script>
+	<script type="text/javascript">
+		function insert() 
+		{
+			var in1=parseInt(document.getElementById("input1").value);
+			var in2=document.getElementById("input2").value;
+			var in3=document.getElementById("input3").value;
+			var in4=parseInt(document.getElementById("input4").value);
+			var in5=parseInt(document.getElementById("input5").value);
+
+			var person={
+						   id:in1,
+						   firstname:in2,
+						   lastname:in3,
+						   fullname:function()
+						   			{
+						   				return this.firstname+" "+this.lastname;
+						   			},
+						   	salary:in4,
+						   	bonus:in5,
+						   	balance:function()
+						   	 		{
+						   	 			return this.salary +  this.bonus;
+						   	 		}
+						};
+
+			var trnew = "<tr>"+
+		    				"<td>" + person.id 			+"</td>"+
+		    				"<td>" + person.firstname 	+"</td>"+
+		    				"<td>" + person.lastname 	+"</td>"+
+		    				"<td>" + person.fullname() 	+"</td>"+
+		    				"<td>" + person.salary 		+"</td>"+
+		    				"<td>" + person.bonus 		+"</td>"+
+		    				"<td>" + person.balance() 	+"</td>"+
+		    			"</tr>";
+		  
+		    $("table").append(trnew);		//jquery code		  
+		}
+</script>
+
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Full Name</th>
+			<th>Salary</th>
+			<th>Bonus</th>
+			<th>Balance</th>
+		</tr>		
+	</table>
+	
+	<br><br>
+
+	<h2>New Employee Data Entry </h2>
+
+	<form action="#" method="get">
+		<label for="input1">ID:</label><br>
+		<input type="text" name="input1" id="input1"><br>
+
+		<label for="input2">First Name:</label><br>
+		<input type="text" name="input2" id="input2"><br>
+
+		<label for="input3">Last Name:</label><br>
+		<input type="text" name="input3" id="input3"><br>
+
+		<label for="input4">Salary:</label><br>
+		<input type="text" name="input4" id="input4"><br>
+
+		<label for="input5">Bonus:</label><br>
+		<input type="text" name="input5" id="input5"><br><br>		
+	</form>	
+
+	<button onclick="insert()">Add Employee</button>
+
+</body>
+</html>

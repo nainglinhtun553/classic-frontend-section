@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classic Student Group</title>
+	<style type="text/css">
+		#note
+		{
+			background-color: green;
+			color: white;
+		}
+
+	</style>
+
+</head>
+<body>
+		<h3>Greeting:</h3>
+		<p id="note">Hello World!</p>
+
+		<h3>Name:</h3>
+		<p id ="name"> Myo Tun Naung</p>
+
+		<h3>Age:</h3>
+		<p id ="age">38</p>
+
+		<h3>Degree:</h3>
+		<input type="text" name ="degree" id = "degree" value="B.C.Tech (Hons)"><br>
+		 <hr>
+
+		<button onclick="changeNote()"> Change Note		</button>
+		<button onclick="changeName()">	Change Name		</button>
+		<button onclick="changeAge()">	Change Age		</button>
+		<button onclick="changeDegree()">	Change Degree	</button>
+		
+		<script type ="text/javascript">
+			function changeNote()
+			{
+				var n = document.getElementByID("note");    //assign object
+				n.innerHTML ="Hello JavaScript!";			//Value Change
+				n.style.background ="yellow";	//CSS Change
+				n.style.color ="red";
+				n.style.padding ="10px";
+				n.style.border ="1px solid red";
+			}
+
+			function changeName()
+			{
+				var n = document.getElementByID("name");
+				n.innerHTML ="Sayar Myo";
+
+				n.style.background ="yellow";
+				n.style.color ="red";
+				n.style.padding ="10px";
+				n.style.border ="1px solid red";
+
+			}
+
+			function changeAge()
+			{
+				var n = document.getElementByID("age");
+				n.innerHTML="20";
+				n.style.background ="yellow";
+				n.style.color ="red";
+				n.style.padding ="10px";
+				n.style.border ="1px solid red";
+
+			}
+
+			function changeDegree()
+			{
+				var n = document.getElementByID("degree");
+				n.value = "B.E(EC)";
+				n.style.background ="yellow";
+				n.style.color = "red";
+				n.style.padding ="10px";
+				n.style.border ="1px solid red";
+			}
+		</script>
+
+		
+</body>
+</html>

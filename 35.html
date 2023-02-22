@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Student Group</title>
+	<style type="text/css">
+
+	#d1, #d2, #d3
+	{
+		width:80px;
+		height:80px;	
+		display: none;
+	}
+
+	#d1 {	background-color: red;	 }
+	#d2	{	background-color: green; }
+	#d3 {	background-color: blue;	 }
+
+	</style>
+
+<script src="jquery-3.5.0.min.js"> </script>
+<script type="text/javascript">
+	$(document).ready(
+					   	 function ()
+					   	 { $("#fi").click
+					   	    (                
+				              function ()
+				                {
+				                   $("#d1").fadeIn();
+				                   $("#d2").fadeIn("slow");                
+				                   $("#d3").fadeIn(3000);
+				                }
+				            );
+				         }
+					);
+   $(document).ready(
+					   	function ()
+					   	{ $("#fo").click
+					   	    (                
+				                function ()
+				                {
+				                   $("#d1").fadeOut();
+				                   $("#d2").fadeOut("slow");                
+				                   $("#d3").fadeOut(3000);
+				                }
+					   	    );
+				        }
+				   	);
+    function fin()
+	{
+		$("#d1").fadeIn();
+        $("#d2").fadeIn("slow");                
+        $("#d3").fadeIn(3000);
+	}
+	function fout()
+	{
+		$("#d1").fadeOut();
+		$("#d2").fadeOut("slow");                
+		$("#d3").fadeOut(3000);
+	}
+</script>
+</head>
+<body>
+
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<div id="d3"></div>
+
+	<button id="fi">Fade In Box</button>
+	<button id="fo">Fade Out Box</button>
+
+	<button onclick="fin()">Fade In Function</button>
+	<button onclick="fout()">Fade Out Function</button>
+
+</body>
+</html>
